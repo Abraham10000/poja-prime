@@ -13,6 +13,8 @@ import com.poja.prime.repository.DummyRepository;
 import com.poja.prime.repository.DummyUuidRepository;
 import com.poja.prime.repository.model.Dummy;
 import com.poja.prime.repository.model.DummyUuid;
+import java.math.BigInteger;
+import java.util.Random;
 
 @PojaGenerated
 @RestController
@@ -33,6 +35,13 @@ public class HealthController {
     return dummyRepository.findAll();
   }
 
+  @GetMapping("/new-prime")
+    public String getNewPrime() {
+        BigInteger prime = BigInteger.probablePrime(10_000, new Random());
+      
+        return prime.toString();
+    }
+  
   @GetMapping(value = "/uuid-created")
   public String uuidCreated() throws InterruptedException {
     var randomUuid = randomUUID().toString();

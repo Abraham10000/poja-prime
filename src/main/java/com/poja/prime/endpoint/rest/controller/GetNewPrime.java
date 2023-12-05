@@ -12,6 +12,6 @@ public class PrimeController {
     public String getNewPrime() {
         BigInteger prime = BigInteger.probablePrime(10_000, new Random());
       
-        return prime.toString(); s
+        return prime.toString();
     }
 }

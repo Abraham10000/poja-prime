@@ -5,7 +5,7 @@ import java.math.BigInteger;
 import java.util.Random;
 
 @RestController
-@RequestMapping("/preprod")
+@RequestMapping("/")
 public class PrimeController {
 
     @GetMapping("/new-prime")

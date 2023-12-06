@@ -38,7 +38,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Handler: com.poja.prime.ApiEventHandler::handleRequest
-      MemorySize: 4000
+      MemorySize: 1024
       Role: !Sub '{{resolve:ssm:/poja-prime/${Env}/execution/role-arn}}'
       Events:
         ApiCall:

@@ -11,7 +11,7 @@ public class PrimeController {
 
     @GetMapping("/new-prime")
     public String getNewPrime() {
-        int bitLength = 10000; 
+        int bitLength = 100; 
         SecureRandom random = new SecureRandom();
 
         long startTime = System.currentTimeMillis();
